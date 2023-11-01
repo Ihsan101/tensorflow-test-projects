@@ -39,7 +39,7 @@ model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
 #We dont need to specify the input shape after the first convalution layer, and the input shape given, (32, 32, 3) is the shape of the items in the CIFAR database.
 #We will use 32 filters in this case, of size 3x3 over our input data then use the relu activation function
 model.add(layers.MaxPooling2D((2, 2)))
-#Performs max pooling function in 2x2 samples with a stride of 2.
+#Downsamples the data into 2x2 samples. Since stride isnt specified, it takes the default value as 2x2, the same as the pooling size. 
 model.add(layers.Conv2D(64, (3, 3), activation='relu'))
 model.add(layers.MaxPooling2D((2, 2)))
 model.add(layers.Conv2D(64, (3, 3), activation='relu'))
