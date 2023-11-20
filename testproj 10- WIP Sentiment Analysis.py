@@ -1,13 +1,13 @@
 #In this model we use the IMDB movie review dataset from keras, with over 25000 reviews from IMDB already processed and labelled as positive or negative
 #Each review is encoded by integers which represents how common a word is in the entire dataset, so a word encoded with 2 will be the second most used word in the entire dataset.
-#NEED TO FIX, I NEED TO ADD ANOTHER ZERO VECTOR IN FRONT OF THE EMBEDDING MATRIX MOST PROLLY. LOOK AT IT WHEN IM FREE.
+
 
 from keras.datasets import imdb
 from keras.preprocessing import sequence
 import tensorflow as tf
 import numpy as np
 
-vocab_size = 88584
+vocab_size = 88587
 
 maxlen = 250
 batch_size = 64
